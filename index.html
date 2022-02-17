@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>❄️ What's the weather?</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Mono&family=PT+Serif:ital,wght@0,400;0,700;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+		/>
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+  <body>
+		<div class="container">
+      <div class="weather-app-wrapper shadow-lg">
+        <div class="weather-app">
+          <form id="search-form" class="row">
+            <div class="col-6">
+              <input
+                type="text"
+                class="form-control shadow-sm"
+								placeholder="Enter a city"
+								id="city-input"
+                autocomplete="off"
+              />
+            </div>
+            <div class="col-2">
+              <button type="submit" class="btn btn-primary mb-3 shadow-md">
+                Search
+              </button>
+            </div>
+          </form>
+          <div class="current-temp">
+            <div class="row">
+              <div class="col-6">
+                <h1 id="city"></h1>
+                <ul>
+                  <li id="date"></li>
+                  <li id="description"></li>
+                </ul>
+              </div>
+              <div class="col-6">
+                <div class="clearfix">
+                  <img
+                    src="images/cloudy.png"
+                    alt="cloudy icon"
+                    class="weather-icon float-left"
+                  />
+                  <div class="float-left">
+                    <span class="temperature" id="temperature"></span>
+                    <span class="unit">
+                      <a href="#" class="active" id="fahrenheit-link">°F</a> |
+                      <a href="#" id="celsius-link">°C</a>
+                    </span>
+                  </div>
+                </div>
+                <ul>
+                  <li>Feels Like: <span id="feels-like"></span> °F</li>
+                  <li>Humidity: <span id="humidity"></span> %</li>
+                  <li>Wind: <span id="wind"></span> mph</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+				</div>
+				<div class="weather-forecast">
+					<div class="row justify-content-center">
+						<div class="col-2 m-2 shadow-lg">
+							<div class="date">Fri</div>
+							<img
+								src="images/cloudy.png"
+								alt="cloudy icon"
+								class="weather-icon float-left"
+								<div
+								class="forecast-temp"
+								/>
+							<span class="forecast-high">35</span>
+							<span class="forecast-low">30</span>
+						</div>
+						<div class="col-2 m-2 shadow-lg">
+							<div class="date">Sat</div>
+							<img
+								src="images/cloudy.png"
+								alt="cloudy icon"
+								class="weather-icon float-left"
+								<div
+								class="forecast-temp"
+								/>
+							<span class="forecast-high">35</span>
+							<span class="forecast-low">30</span>
+						</div>
+						<div class="col-2 m-2 shadow-lg">
+								<div class="date">Sun</div>
+								<img
+									src="images/cloudy.png"
+									alt="cloudy icon"
+									class="weather-icon float-left"
+									<div
+									class="forecast-temp"
+								/>
+								<span class="forecast-high">35</span>
+								<span class="forecast-low">30</span>
+						</div>
+						<div class="col-2 m-2 shadow-lg">
+								<div class="date">Mon</div>
+								<img
+									src="images/cloudy.png"
+									alt="cloudy icon"
+									class="weather-icon float-left"
+								<div
+										class="forecast-temp"
+								/>
+									<span class="forecast-high">35</span>
+									<span class="forecast-low">30</span>
+						</div>
+						<div class="col-2 m-2 shadow-lg">
+								<div class="date">Tue</div>
+								<img
+									src="images/cloudy.png"
+									alt="cloudy icon"
+									class="weather-icon float-left"
+									<div
+									class="forecast-temp"
+									/>
+										<span class="forecast-high">35</span>
+										<span class="forecast-low">30</span>
+							</div>
+						</div>
+					</div>	
+				</div>					
+			</div>
+            <div class="github-address">
+                <a href="https://github.com/linzdigio/weather-app-project" target="_blank" class="github-link">Open-source code </a>by Lindsey DiGiovanni</a></div>
+            </div>		
+		</div>
+		<script src="src/index.js"></script>
+  </body>
+</html>
