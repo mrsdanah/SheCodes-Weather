@@ -1,0 +1,52 @@
+body {
+  padding: 15px;
+}
+
+.main-weatherimage {
+  width: 250px;
+  padding: 10px;
+}
+
+.container2 {
+  display: flex;
+  font-size: 11px;
+}
+
+.h1 .container .row {
+  font-family: "Dancing Script", cursive;
+  font-family: "Poppins", sans-serif;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 50px;
+}
+
+h2 {
+  padding: 0 0 20px 0;
+}
+
+h4 {
+  font-weight: bold;
+  padding: 0 0 0 0;
+}
+
+h3 {
+  font-size: 40px;
+}
+
+.img-fluid {
+  width: 200px;
+}
+
+.row {
+  padding: 5px;
+}
+
+.row .weekDay .h2 {
+  font-weight: 650;
+}
+
+.linkgit {
+  text-align: center;
+}
