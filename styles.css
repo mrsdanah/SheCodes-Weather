@@ -1,52 +1,125 @@
+.container {
+  margin-top: 50px;
+  border: black;
+}
+
+#search {
+  font-size: 20px;
+  font-family: "verdana", cursive;
+  margin-left: 70px;
+}
+
+#animation {
+  background: url("https://c.tenor.com/PLqmB_SmXQMAAAAC/clouds-sky.gif");
+  background-size: cover;
+  border-radius: 100px;
+}
+
 body {
-  padding: 15px;
+  background-image: url("346351-download-free-rain-wallpaper-weather-wallpaper-clouds-rain.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-
-.main-weatherimage {
-  width: 250px;
-  padding: 10px;
+img {
+  display: block;
+  margin: 0 auto;
+  border-radius: 200px;
 }
-
-.container2 {
-  display: flex;
-  font-size: 11px;
+form {
+  text-align: center;
+  font-family: "verdana", cursive;
+  color: blue;
 }
-
-.h1 .container .row {
-  font-family: "Dancing Script", cursive;
-  font-family: "Poppins", sans-serif;
+input {
+  font-size: 50px;
+  text-align: center;
+  font-family: "verdana", cursive;
+  border-radius: 100px;
+  margin: 20px;
+  color: blue;
 }
 
 h1 {
-  font-weight: bold;
-  font-size: 50px;
-}
-
-h2 {
-  padding: 0 0 20px 0;
-}
-
-h4 {
-  font-weight: bold;
-  padding: 0 0 0 0;
-}
-
-h3 {
-  font-size: 40px;
-}
-
-.img-fluid {
-  width: 200px;
-}
-
-.row {
-  padding: 5px;
-}
-
-.row .weekDay .h2 {
-  font-weight: 650;
-}
-
-.linkgit {
+  font-size: 100px;
+  font-family: "verdana", cursive;
   text-align: center;
+}
+
+h5 {
+  font-family: "verdana", cursive;
+  text-align: center;
+  font-weight: bold;
+}
+
+.days {
+  text-orientation: upright;
+  writing-mode: vertical-lr;
+  text-align: center;
+  font-size: 29px;
+  font-weight: bold;
+  font-family: "verdana", cursive;
+  display: inline;
+}
+
+.daysbold {
+  text-orientation: upright;
+  writing-mode: vertical-lr;
+  text-align: center;
+  font-size: 35px;
+  font-weight: bold;
+  font-family: "verdana", cursive;
+  display: inline;
+  color: blue;
+}
+
+#city {
+  text-orientation: upright;
+  writing-mode: vertical-lr;
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  font-family: "verdana", cursive;
+  display: inline;
+}
+
+#city-here {
+  text-orientation: upright;
+  writing-mode: vertical-lr;
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  font-family: "verdana", cursive;
+  display: inline;
+}
+
+#text {
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  font-family: "verdana", cursive;
+}
+
+.uk {
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  font-family: "verdana", cursive;
+  line-height: 1;
+}
+
+.abroad {
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  font-family: "Comfortaa", cursive;
+  line-height: 1;
+}
+
+span {
+  font-size: 50px;
+  color: pink;
+  font-family: "Comfortaa", cursive;
+  font-weight: bold;
+
+  padding: 60px;
 }
