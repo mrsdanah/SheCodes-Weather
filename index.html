@@ -4,126 +4,172 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Weather App Project</title>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Weather App</title>
+
     <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="src/styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@1,400;1,600&family=Macondo&family=Zen+Loop&display=swap"
-      rel="stylesheet"
-    />
-    
-
-    <script
-      src="https://kit.fontawesome.com/58b851f186.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </head>
-
   <body>
-
     <div class="container">
-      <div class="weather-app-wrapper">
-        <div class="weather-app">
-    
-    <br />
-    <br />
-    <br />
-   
-            
-    <h1>Weather App</h1>  
-    
-   <h2>CityName</h2>  
-    
-    <div class="row .mx-0"></div>
-    <div class="col"></div>
-     <div class="p-3 border bg-light"></div>
-    <div class="card" style="width: 27rem">
-          <div class="card-body">
-          <p class="card-text" id="date">
-             </p>
-         <img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
-          id = "icon-1"  
-          alt="sunny icon"
-            class="float-left"
-            />;
-            <p id="atmosphere">Sunny</p>                  
-                      
-          </div>
-   <span class "col-md-6">
-     <ul>
-       <li> Humidity: <span id="humidity"></span>%</li>
-         <li> Wind: <span id="wind"></span>kmh</li>
-     </ul>
-    </span>
-
-    <div class="col"></div>
-      <div class="p-3 border bg-light"></div>
-        <div class="card" style="width: 27rem">
-          <div class="card-body">
-                     
-        <div class="degrees" id="degrees">xxx</div>
-                
-        <a href="#" id="fahrenheit">°F</a> |
-        <a href="#" id="celsius">°C</a>
-        
-          </div>
-        </div>
-      
-        <form id="search-text-input"
-        class="nb-3">
-        <div class="row">
-          <div class="col-9">
-            <input type="search" placeholder="Enter city name"
-            class="form-control"
-            id="input-text"
-            autocomplete="off"
-            autofocus="on"
+      <div class="card card-main" style="width: 650px">
+        <div class="card-body">
+          <form id="enter-city-form">
+            <input
+              type="search"
+              placeholder="Enter a city"
+              autofocus="on"
+              autocomplete="off"
+              id="enter-city-input"
             />
+          </form>
+
+          <form>
+            <button class="btn" id="search-btn" autofocus="on">Search</button>
+          </form>
+
+          <form>
+            <button class="btn" id="current-loc-btn" autofocus="off">
+              Current Location
+            </button>
+          </form>
+
+          <h2 class="city">Philadelphia, PA</h2>
+
+          <!--<div class="row">
+            <div class="col-1 col-temp move">
+              <ul class="time">
+                <li>00:00</li>
+                <li>01:00</li>
+                <li>02:00</li>
+                <li>03:00</li>
+                <li>04:00</li>
+                <li>05:00</li>
+                <li>06:00</li>
+                <li>07:00</li>
+                <li>08:00</li>
+                <li>09:00</li>
+                <li>10:00</li>
+                <li>11:00</li>
+                <li>12:00</li>
+                <li>13:00</li>
+                <li>14:00</li>
+                <li>15:00</li>
+                <li>16:00</li>
+                <li>17:00</li>
+                <li>18:00</li>
+                <li>19:00</li>
+                <li>20:00</li>
+                <li>21:00</li>
+                <li>22:00</li>
+                <li>23:00</li>
+              </ul>
+            </div>
+
+            <div class="col-3 col-time move">
+              <ul class="temp">
+                <li>0°C ⛅️</li>
+                <li>0°C ⛅️</li>
+                <li>0°C ⛅️</li>
+                <li>0°C ⛅️</li>
+                <li>0°C ⛅️</li>
+                <li>0°C ⛅️</li>
+                <li>0°C ⛅️</li>
+                <li>0°C ⛅️</li>
+                <li>0°C ⛅️</li>
+                <li>0°C ⛅️</li>
+                <li>0°C ⛅️</li>
+                <li>0°C ⛅️</li>
+                <li>0°C ⛅️</li>
+                <li>0°C ⛅️</li>
+                <li>0°C ⛅️</li>
+                <li>0°C ⛅️</li>
+                <li>0°C ⛅️</li>
+                <li>0°C ⛅️</li>
+                <li>0°C ⛅️</li>
+                <li>0°C ⛅️</li>
+                <li>0°C ⛅️</li>
+                <li>0°C ⛅️</li>
+                <li>0°C ⛅️</li>
+                <li>0°C ⛅️</li>
+              </ul>
+            
+          </div>-->
+
+          <div>
+            <div
+              class="card card-now move"
+              id="main-day-card"
+              style="width: 400px"
+            >
+              <div class="card-body">
+                <p class="time-main">Now, 21:40</p>
+                <p class="weather-disc data">Clear sky</p>
+                <span class="temp-main data">
+                  <div class="temp-main data main-temp">6</div>
+                  <span class="C"
+                    ><a href="" id="C">°C</a>/<a href="" id="F">°F</a></span
+                  >
+                  <img
+                    src="http://openweathermap.org/img/wn/10d@2x.png"
+                    alt="icon"
+                    class="main-emoji"
+                    id="emoji-main"
+                /></span>
+              </div>
+              <div class="col">
+                <div
+                  class="card details details-feels move"
+                  style="width: 120px"
+                >
+                  <div class="card-body">
+                    <p class="feels-like data">Feels like</p>
+                    <div class="temp-details data" id="feels-like-temp">
+                      5°C
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="card details details-hum move" style="width: 120px">
+                  <div class="card-body">
+                    <p class="humidity data">Humidity</p>
+                    <div class="humidity-details data" id="humidity">67%</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col">
+                <div
+                  class="card details details-pres move"
+                  style="width: 120px"
+                >
+                  <div class="card-body wind">
+                    <p class="wind-speed data">Wind speed</p>
+                    <div class="wind-speed-details data" id="wind-speed">
+                      3 km/h
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-              
-        <div class="col-3">
-        <input
-          type="submit"
-          value="Search"
-          class="btn btn-primary w-100"
-        />
-      </div>
-     <br />
-     <br />
-     <br />
-      <span class="d-grid gap-2 col-6 mx-auto">
-        <button class="btn btn-primary">Current Location</button>
-      </span>
-
-      </form>
-                
-    <br />
-    <br />
-
-    
         </div>
-      </div> 
-      <div class="weather-forecast" id="forecast">
+        <div class="forecast"></div>
+      </div>
+      <p class="name">
+        <a href="https://github.com/mrsdanah/SheCodes-Weather" class="name">
+          open-source code
+        </a>
+        by Dana Hemphill
+      </p>
     </div>
-     
-
-
-    <small>
-  <a href="https://github.com/mrsdanah/SheCodes-Weather"
-  id="footnote"
-  target="_blank">Open-Source Code</a> by Dana Hemphill
-     </small>
-         <script src="src/index.js"></script>
+    <script src="src/index.js"></script>
   </body>
-    
-  
-  </html>
-
+</html>
