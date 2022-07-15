@@ -66,7 +66,7 @@ if (minutes < 10) {
 let apiKey = "2f8b68a6537c0c66560a05003759942d";
 
 function defaultSearch() {
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=chicago&appid=${apiKey}&units=imperial`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Philadelphia&appid=${apiKey}&units=imperial`;
   axios.get(apiUrl).then(showTemp);
 }
 
