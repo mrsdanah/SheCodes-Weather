@@ -129,8 +129,9 @@ a {
 
 #search-button {
   border-radius: 5px;
-  background-color: #212529;
+  background-color: #58a9bf;
   color: lightgray;
+  text-color: black;
   border: none;
   padding: 5px 10px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
@@ -138,7 +139,7 @@ a {
 }
 
 #search-button:hover {
-  background-color: #464f56;
+  background-color: #57b5cf;
 }
 
 #current {
@@ -157,6 +158,6 @@ a {
 
 #code-link {
   text-decoration: underline;
-  color: blue;
+  color: black;
   font-size: 12px;
 }
