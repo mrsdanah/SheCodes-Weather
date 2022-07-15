@@ -1,63 +1,132 @@
-body {
-  width: 50%;
-  display: block;
-  margin: 0 auto;
-  font-family: "Barlow", sans-serif;
-}
-.card-all {
-  margin-top: 30px;
-  border-radius: 13px;
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-}
-.card-search-bar {
-  padding: 40px 0 40px 0;
-  margin-left: 20px;
-  line-height: 30px;
-}
-.search-button {
+.weather-app {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 20px;
+  border: 2px solid black;
   border-radius: 5px;
-  background-color: #173f7f;
-  transition: 200ms ease-in-out;
 }
-.search-button:hover {
-  background-color: #91b1e5;
-}
-.location-button {
-  border-radius: 5px;
-  background-color: #173f7f;
-  color: #fff;
-  transition: 200ms ease-in-out;
-}
-.location-button:hover {
-  background-color: #6f9be1;
-  cursor: pointer;
-}
+
 h1 {
-  font-size: 30px;
-  margin-left: 20px;
+  font-family: Exo 2;
+  font-size: 50px;
+  color: rgb(85, 29, 138);
 }
 
 h2 {
-  position: relative;
-  top: -75px;
-  right: -200px;
+  font-size: 40px;
+  text-align: left;
+  color: rgb(109, 21, 21);
 }
-.units {
-  font-size: 15px;
-  position: relative;
-@@ -51,7 +55,7 @@ h1 {
-.card-weekly-weather {
-  font-size: 20px;
+
+h3 {
+  font-size: 30px;
   text-align: center;
-  margin-top: -35px;
-  margin-top: -50px;
 }
-.card-weekly-temperature {
-  color: rgb(70, 36, 133);
-  font-size: 18px;
+
+h5 {
+  font-size: 25px;
 }
-.coder {
+
+li {
+  list-style: none;
+  text-transform: capitalize;
+}
+
+p {
+  text-transform: capitalize;
+}
+
+.button {
+  display: block;
+  margin: 0 auto;
+  font-size: 10px;
+}
+
+.label {
+  font-size: 40px;
+  font-weight: bold;
+  color: rgb(119, 16, 16);
+}
+
+.weather-forecast {
+  margin-top: 40px;
+  text-align: left;
+  color: black;
+}
+.weather-forecast-date {
+  font-size: 16px;
+  color: black;
+  opacity: 0.5;
+}
+
+.weather-forecast-temperature-min {
+  opacity: 0.5;
+}
+
+.weather-forecast-temperatures {
+  font-size: 13px;
+}
+
+#date {
+  font-size: 25px;
+}
+
+#search-text-input {
   font-size: 15px;
-  color: #5e6164;
-  font-family: "Barlow", sans-serif;
 }
+
+#current-temp {
+  font-size: 30px;
+  font-weight: bold;
+  color: brown;
+}
+
+#fahr-temp {
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(137, 19, 19);
+}
+
+#celsius-temp {
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(63, 132, 56);
+}
+
+#fahrenheit {
+  font-size: 25px;
+  font-weight: bold;
+  color: rgb(137, 19, 19);
+}
+
+#celsius {
+  font-size: 25px;
+  font-weight: bold;
+  color: rgb(63, 132, 56);
+}
+
+#hi-lo {
+  font-size: 20px;
+  color: black;
+}
+
+#atmosphere {
+  font-size: 35px;
+  color: rgb(137, 19, 19);
+  font-weight: bold;
+}
+
+#degrees {
+  font-size: 35px;
+}
+
+#input-text {
+  padding: 10px 20px;
+}
+
+#footnote {
+  display: inline;
+  margin: 0 auto;
+  text-align: right;
+}
+
