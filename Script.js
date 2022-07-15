@@ -167,6 +167,10 @@ function showTemperature(response) {
   getForecast(response.data.coord);
 }
 
+let buttonClick = document.querySelector("button");
+buttonClick.addEventListener("click", retrievePosition);
+let celsiusTemperature = null;
+
 function getPosition(position) {
   let lat = position.coords.latitude;
   let lon = position.coords.longitude;
@@ -178,9 +182,3 @@ function retrievePosition(event) {
   event.preventDefault;
   navigator.geolocation.getCurrentPosition(getPosition);
 }
-
-let buttonClick = document.querySelector("button");
-buttonClick.addEventListener("click", retrievePosition);
-
-let celsiusTemperature = null;
-
