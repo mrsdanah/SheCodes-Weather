@@ -65,7 +65,7 @@ function searchCity(city) {
   let apiKey = "2f8b68a6537c0c66560a05003759942d";
   let apiEndpoint = "https://api.openweathermap.org/data/2.5/weather";
   let apiUrl = `${apiEndpoint}?q=${city}&appid=${apiKey}&units=metric`;
-let cityExample = "Lisbon";
+let cityExample = "Philadlephia";
   axios.get(apiUrl).then(displayWeather);
 }
 
