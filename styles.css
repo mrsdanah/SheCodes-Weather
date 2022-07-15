@@ -37,11 +37,7 @@ a {
 }
 
 .card-body {
-  background: linear-gradient(
-    109.6deg,
-    rgb(100, 178, 249) 11.2%,
-    rgba(114, 231, 159, 0.8) 91.1%
-  );
+  background-color: lightgray;
 }
 
 .location {
