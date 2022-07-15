@@ -13,7 +13,7 @@
       crossorigin="anonymous"
     />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <link rel="stylesheet" href="/src/styles.css">
+    <link rel="stylesheet" href="src/style.css">
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -32,235 +32,96 @@
       src="https://kit.fontawesome.com/b0dd47b18e.js"
       crossorigin="anonymous"
     ></script>
-    
-  </head>
-  
+</head>
   <body>
-    <div class="container">
-      <div class="card mb-3">
-        <div class="card-body">
+  
+      <br />
+      <div class="card-all">
+        <div class="card-search-bar">
+          <form id="search-form" >
+            <input type="search" placeholder="Search your City" autofocus id="city-input" />
+            <button class="search-button" id="search-button">🔎</button>
+            <button class="location-button" id="location-button" >Current Location</button>
+                      </form>
+         
+        </div>
+
+        <h1 class="city-name" >
+          <div><img src="" id="icon"></div>
+          <strong id="city">Lisbon</strong>
+          <div><small class="day-time" id="date-time"></small></div>
+          <div><img src="" id="icon"></div>
+          <div class="temperature-today">
+                    <div class="temperature-today">
+            <strong id="temperature-today">25°</strong>
+            <span class="units">
+                <a href="#" id="celsius-link">°C |</a> 
+              <a href="#" id="fahrenheit-link">°F</a>
+            </span>
+            <br /> 
+            
+            <p />
+          </div>
+        </h1>
+        <h2>
+          <ul class="extra-details">
+            <li ><strong>Description: </strong><span id="weather-description" ></span></li>
+            <li><strong>Humidity: </strong><span id="humidity" ></span></li>
+            <li ><strong>Wind: </strong><span id="wind"></span></li>
+                            </ul>
+        </h2>
+        <h3>
           <div class="row">
-            <div class="col-12">
-              <h1 class="card-title">
-                The Weather App <i class="fa-solid fa-umbrella"></i>
-              </h1>
-              <h6>Date</h6>
+            <div class="col-2">
+              <div class="card-weekly-weather" id="">
+                Sat <br />
+                ☀️
+                <p class="card-weekly-temperature">
+                  10° | <strong> 20°</strong>
+                </p>
+              </div>
             </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-8">
-          <div class="card">
-            <div class="card-body">
-              <br />
-              <form id="city-search-form">
-                <input
-                  id="city-choice"
-                  type="search"
-                  placeholder="Search for a city"
-                />
-                <input type="submit" value="GO" />
-              </form>
-              <br />
-              <button type="button" class="btn btn-dark" id="searchCurrent">
-                Current Location
-              </button>
-              <button type="button" class="btn btn-dark" id="search">
-                New York
-              </button>
-              <button type="button" class="btn btn-dark" id="search">
-                Los Angeles
-              </button>
-              <br />
-              <br />
-              <br />
-              <div class="row" id="currentlocation">
-                <div class="col">
-                  <div class="card">
-                    <div class="card-body" id="currentlocation">
-                      <button
-                        id="convert-cel"
-                        type="button"
-                        class="btn btn-light"
-                      >
-                        C
-                      </button>
-                      <button
-                        id="convert-far"
-                        type="button"
-                        class="btn btn-light"
-                      >
-                        F
-                      </button>
-                      <div class="col">
-                        <img
-                          src="data:image/png;base64,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"
-                          alt=""
-                          width="200px"
-                        />
-                      </div>
-                      <div class="row">
-                        <div class="col-3">
-                          <p id="city">PHILLY</p>
-                        </div>
-                        <div class="col-9">
-                          <p id="text">
-                            <p class="uk" id="uk-city-day">Sunday</p>
-                            <p class="uk" id="uk-city-date">22</p>
-                            <p class="uk" id="uk-city-month">May</p>
-                            <span id="current-temp">18°C</span>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col">
-                  <div class="card">
-                    <div class="card-body" id="currentlocation">
-                      <button type="button" class="btn btn-light">C</button>
-                      <button type="button" class="btn btn-light">F</button>
-                      <div class="col">
-                        <img
-                          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQw3CnU3sc3bDgmrwolM1uGzNWKLc9y5T7fRQ&usqp=CAU"
-                          alt=""
-                          width="200px"
-                        />
-                      </div>
-                      <div class="row">
-                        <div class="col-3">
-                          <p id="city-here">LISBON</p>
-                        </div>
-                        <div class="col-9">
-                          <p id="text">
-                            <p class="abroad" id="abroad-city-day">Sunday</p>
-                            <p class="abroad" id="abroad-city-date">22</p>
-                            <p class="abroad" id="abroad-city-month">May</p>
-                            <span id="temp-here">28°C</span>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+            <div class="col-2">
+              <div class="card-weekly-weather">
+                Sun <br />
+                🌦️
+                <p class="card-weekly-temperature">
+                  11° | <strong> 23°</strong>
+                </p>
+              </div>
+            </div>
+            <div class="col-2">
+              <div class="card-weekly-weather">
+                Mon <br />
+                ⛅
+                <p class="card-weekly-temperature">
+                  11° | <strong> 19°</strong>
+                </p>
+              </div>
+            </div>
+            <div class="col-2">
+              <div class="card-weekly-weather">
+                Tue <br />
+                ⛅
+                <p class="card-weekly-temperature">
+                  9° | <strong> 22°</strong>
+                </p>
+              </div>
+            </div>
+            <div class="col-2">
+              <div class="card-weekly-weather">
+                Wed <br />
+                ☀️
+                <p class="card-weekly-temperature">
+                  9° | <strong> 24°</strong>
+                </p>
               </div>
             </div>
           </div>
-        </div>
-
-        <div class="col-4">
-          <div class="card">
-            <div class="card-body">
-              <br />
-              <div class="row">
-                <div class="col-4">
-                  <p class="days">MON</p>
-                </div>
-                <div class="col-4">
-                  <img
-                    src="https://i.pinimg.com/originals/3f/9f/05/3f9f05296f222540e0e3905108015e0d.jpg"
-                    alt=""
-                    width="100"
-                  />
-                </div>
-                <div class="col-1">
-                  <p class="daysbold">18</p>
-                </div>
-                <div class="col-1">
-                  <p class="daysbold">°C</p>
-                </div>
-                <div class="col-12">
-                  <br />
-                  <br />
-                </div>
-                <div class="col-4">
-                  <p class="days">TUE</p>
-                </div>
-                <div class="col-4">
-                  <img
-                    src="https://i.pinimg.com/originals/10/5e/44/105e443ee07af7c99716a5fc17cc28b6.png"
-                    alt=""
-                    width="100"
-                  />
-                </div>
-                <div class="col-1">
-                  <p class="daysbold">12</p>
-                </div>
-                <div class="col-1">
-                  <p class="daysbold">°C</p>
-                </div>
-                <div class="col-12">
-                  <br />
-                  <br />
-                </div>
-                <div class="col-4">
-                  <p class="days">WED</p>
-                </div>
-                <div class="col-4">
-                  <img
-                    src="data:image/png;base64,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"
-                    alt=""
-                    width="100"
-                  />
-                </div>
-                <div class="col-1">
-                  <p class="daysbold">0</p>
-                </div>
-                <div class="col-1">
-                  <p class="daysbold">°C</p>
-                </div>
-                <div class="col-12">
-                  <br />
-                  <br />
-                </div>
-                <div class="col-4">
-                  <p class="days">THU</p>
-                </div>
-                <div class="col-4">
-                  <img
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmCMpuPl2I2Lzz0N2JSapjkA_JgzC7tLK9JQ&usqp=CAU"
-                    alt=""
-                    width="100"
-                  />
-                </div>
-                <div class="col-1">
-                  <p class="daysbold">10</p>
-                </div>
-                <div class="col-1">
-                  <p class="daysbold">°C</p>
-                </div>
-                <div class="col-12">
-                  <br />
-                  <br />
-                </div>
-                <div class="col-4">
-                  <p class="days">FRI</p>
-                </div>
-                <div class="col-4">
-                  <img
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiH2A95EUpEKYid3v67SgQM3uwPjIgt_5a8A&usqp=CAU"
-                    alt=""
-                    width="100"
-                  />
-                </div>
-                <div class="col-1">
-                  <p class="daysbold">18</p>
-                </div>
-                <div class="col-1">
-                  <p class="daysbold">°C</p>
-                </div>
-                <div class="col-12">
-                  <br />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        </h3>
       </div>
     </div>
-    <script src="/src/index.js"></script>
+    <div class="coder"><a href="https://github.com/Ocipus/shecodes-weather.git">Open-source code</a><span>, by Clara Supico</span></div>
+    <script src="index.js"></script>
   </body>
 </html>
